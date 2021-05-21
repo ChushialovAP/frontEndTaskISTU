@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    //border: 1px solid black
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.main-content {
+    margin: 0 130px;
+    border: 0;
+}
+
+header {
+    height: 40px;
+    margin: 32px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        left: 0;
+        display: flex;
+        align-items: center;
+
+        .logo-sign-layer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #ellipse {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                background-color: #E5261E;
+            }
+            
+            #vector {
+                position: absolute;
+                width: 0;
+                height: 0;
+                margin-left: 5px;
+                border-style: solid;
+                border-width: 20px 0 20px 32px;
+                border-color: transparent transparent transparent #FFFFFF;
+            }
+        }
+    
+        .logo-text {
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 11px;
+        }
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+
+        .div-search-input {
+            .search-input {
+                width: 320px;
+                border-left: none;
+                border-top: none;
+                border-right: none;
+                border-bottom: 1px solid #333333;
+                text-align: left;
+                font-size: 16px;
+            }
+
+            .search-input:focus {
+                outline: none;
+            }
+        }
+
+        .div-search-button {
+            margin-left: 32px;
+
+            .search-button {
+                border: none;
+                background-color: white;
+                color: #E5261E;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .div-login-button {
+        .login-button {
+            border: none;
+            width: 113px;
+            height: 38px;
+            background-color: #E5261E;
+            color: white;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    }
+}
+
+.tabs {
+    margin: 44px auto 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .films, .tv {
+        font-weight: 500;
+        font-size: 28px;
+    }
+}
+
+.new {
+    height: 478px;
+    margin: 32px auto;
+}
+
+.genres {
+    height: 252px;
+    margin: 0 auto 72px;
+}
+
+footer {
+    height: 120px;
+    background-color: #F2F2F2;
+}
