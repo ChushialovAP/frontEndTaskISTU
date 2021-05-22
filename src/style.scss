@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    //border: 1px solid black
+    //border: 1px solid black;
 }
 
 body {
@@ -141,18 +141,42 @@ header {
     height: 434px;
     //background-color: darksalmon;
     border-radius: 8px;
+}
 
-    p {
-        margin-top: 16px;
-        font-size: 20px;
-        font-weight: 400;
-        width: 100%;
-    }
+.card-name {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
 }
 
 .card-image {
     width: 100%;
     height: 370px;
+    position: relative;
+}
+
+.card-image-text {
+    opacity: 0;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #333333, $alpha: 0.8);
+    color: #F2F2F2;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    line-height: 22px;
+    transition: opacity 0.25s;
+    cursor: pointer;
+}
+
+.card-image-text:hover {
+    opacity: 1;
 }
 
 .genres {
