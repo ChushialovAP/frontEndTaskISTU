@@ -148,7 +148,7 @@ header {
   margin: 32px auto;
 }
 
-.new-header {
+.header {
   font-weight: 500;
   font-size: 24px;
   margin-bottom: 16px;
@@ -211,6 +211,80 @@ header {
 .genres {
   height: 252px;
   margin: 0 auto 72px;
+}
+
+.genres-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.g-card {
+  position: relative;
+  width: 280px;
+  height: 208px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 48px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+}
+
+#g-card1:hover {
+  background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
+}
+
+#g-card2:hover {
+  background: linear-gradient(127.83deg, #f2994a 8.44%, #eb5757 91.36%);
+}
+
+#g-card3:hover {
+  background: linear-gradient(127.83deg, #56ccf2 8.44%, #2f80ed 91.36%);
+}
+
+#g-card4:hover {
+  background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+}
+
+#g-card1 {
+  background: linear-gradient(127.83deg, rgba(242, 201, 76, 0.8) 8.44%, rgba(242, 154, 74, 0.8) 91.36%);
+}
+
+#g-card2 {
+  background: linear-gradient(127.83deg, rgba(242, 153, 74, 0.8) 8.44%, rgba(235, 87, 87, 0.8) 91.36%);
+}
+
+#g-card3 {
+  background: linear-gradient(127.83deg, rgba(86, 204, 242, 0.8) 8.44%, rgba(47, 128, 237, 0.8) 91.36%);
+}
+
+#g-card4 {
+  background: linear-gradient(127.83deg, rgba(130, 130, 130, 0.8) 8.44%, rgba(51, 51, 51, 0.8) 91.36%);
+}
+
+.g-card-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.g-title {
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 24px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: #FFFFFF;
 }
 
 footer {
