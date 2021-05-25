@@ -7,7 +7,15 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-.main-content {
+body a {
+  text-decoration: none;
+}
+
+body a:visited {
+  text-decoration: none;
+}
+
+.main-content, .footer-content {
   max-width: 1180px;
   margin: 0 auto;
   border: 0;
@@ -116,6 +124,11 @@ header {
   color: white;
   border-radius: 4px;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #CC221B;
 }
 
 .tabs {
@@ -290,5 +303,52 @@ header {
 footer {
   height: 120px;
   background-color: #F2F2F2;
+}
+
+.footer-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.htc-logo {
+  margin-left: 26px;
+  margin-right: 40px;
+}
+
+.info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 16px;
+}
+
+.address, .number {
+  font-weight: 400;
+}
+
+.address {
+  margin-bottom: 6px;
+}
+
+.number {
+  margin-bottom: 10px;
+}
+
+.htc-url {
+  font-weight: 500;
+}
+
+.htc-url a {
+  text-decoration: none;
+  color: #1F4766;
+}
+
+.htc-url a:visited {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
