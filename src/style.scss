@@ -9,16 +9,21 @@ body {
     a {
         text-decoration: none;
     }
-
     a:visited {
         text-decoration: none;
     }
 }
 
-header, main, .footer-content {
+header,
+main,
+.footer-content {
     max-width: 1180px;
     margin: 0 auto;
     border: 0;
+}
+
+main {
+    margin-bottom: 72px;
 }
 
 .header-content {
@@ -27,7 +32,7 @@ header, main, .footer-content {
     margin: 32px 0 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;   
+    justify-content: space-between;
 }
 
 .logo {
@@ -40,14 +45,12 @@ header, main, .footer-content {
     display: flex;
     justify-content: center;
     align-items: center;
-
     #ellipse {
         height: 36px;
         width: 36px;
         border-radius: 50%;
         background-color: #E5261E;
     }
-    
     #vector {
         position: absolute;
         width: 0;
@@ -86,7 +89,7 @@ header, main, .footer-content {
 }
 
 .div-search-button {
-    margin-left: 32px;  
+    margin-left: 32px;
 }
 
 .search-button {
@@ -118,21 +121,31 @@ header, main, .footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 32px;
 }
 
 .tab {
+    background-color: white;
+    border: none;
     font-weight: 500;
     font-size: 28px;
+    box-sizing: b;
+    height: 100%;
+}
 
-    :hover {
-        color: #E5261E;
-        border-bottom: 2px solid #E5261E;
-    }
+.tab:hover {
+    color: #E5261E;
+    border-bottom: 2px solid #E5261E;
+    line-height: 33px;
+}
+
+.tv {
+    display: none;
 }
 
 .new {
     height: 478px;
-    margin: 32px auto;
+    margin-bottom: 32px;
 }
 
 .header {
@@ -193,7 +206,6 @@ header, main, .footer-content {
 
 .genres {
     height: 252px;
-    margin: 0 auto 72px;
 }
 
 .genres-cards {
@@ -217,15 +229,15 @@ header, main, .footer-content {
 }
 
 #g-card2:hover {
-    background: linear-gradient(127.83deg, rgba($color: #F2994A, $alpha: 1)  8.44%, rgba($color: #EB5757, $alpha: 1)  91.36%);
+    background: linear-gradient(127.83deg, rgba($color: #F2994A, $alpha: 1) 8.44%, rgba($color: #EB5757, $alpha: 1) 91.36%);
 }
 
 #g-card3:hover {
-    background: linear-gradient(127.83deg, rgba($color: #56CCF2, $alpha: 1)  8.44%, rgba($color: #2F80ED, $alpha: 1)  91.36%);
+    background: linear-gradient(127.83deg, rgba($color: #56CCF2, $alpha: 1) 8.44%, rgba($color: #2F80ED, $alpha: 1) 91.36%);
 }
 
 #g-card4:hover {
-    background: linear-gradient(127.83deg, rgba($color: #828282, $alpha: 1)  8.44%, rgba($color: #333333, $alpha: 1)  91.36%);
+    background: linear-gradient(127.83deg, rgba($color: #828282, $alpha: 1) 8.44%, rgba($color: #333333, $alpha: 1) 91.36%);
 }
 
 #g-card1 {
@@ -233,15 +245,15 @@ header, main, .footer-content {
 }
 
 #g-card2 {
-    background: linear-gradient(127.83deg, rgba($color: #F2994A, $alpha: 0.8)  8.44%, rgba($color: #EB5757, $alpha: 0.8)  91.36%);
+    background: linear-gradient(127.83deg, rgba($color: #F2994A, $alpha: 0.8) 8.44%, rgba($color: #EB5757, $alpha: 0.8) 91.36%);
 }
 
 #g-card3 {
-    background: linear-gradient(127.83deg, rgba($color: #56CCF2, $alpha: 0.8)  8.44%, rgba($color: #2F80ED, $alpha: 0.8)  91.36%);
+    background: linear-gradient(127.83deg, rgba($color: #56CCF2, $alpha: 0.8) 8.44%, rgba($color: #2F80ED, $alpha: 0.8) 91.36%);
 }
 
 #g-card4 {
-    background: linear-gradient(127.83deg, rgba($color: #828282, $alpha: 0.8)  8.44%, rgba($color: #333333, $alpha: 0.8)  91.36%);
+    background: linear-gradient(127.83deg, rgba($color: #828282, $alpha: 0.8) 8.44%, rgba($color: #333333, $alpha: 0.8) 91.36%);
 }
 
 .g-card-center {
@@ -283,7 +295,8 @@ footer {
     font-size: 16px;
 }
 
-.address, .number {
+.address,
+.number {
     font-weight: 400;
 }
 
@@ -297,12 +310,10 @@ footer {
 
 .htc-url {
     font-weight: 500;
-
     a {
         text-decoration: none;
         color: #1F4766;
     }
-
     a:visited {
         text-decoration: none;
     }

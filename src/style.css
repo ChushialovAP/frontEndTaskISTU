@@ -15,10 +15,16 @@ body a:visited {
   text-decoration: none;
 }
 
-header, main, .footer-content {
+header,
+main,
+.footer-content {
   max-width: 1180px;
   margin: 0 auto;
   border: 0;
+}
+
+main {
+  margin-bottom: 72px;
 }
 
 .header-content {
@@ -144,21 +150,32 @@ header, main, .footer-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .tab {
+  background-color: white;
+  border: none;
   font-weight: 500;
   font-size: 28px;
+  -webkit-box-sizing: b;
+          box-sizing: b;
+  height: 100%;
 }
 
-.tab :hover {
+.tab:hover {
   color: #E5261E;
   border-bottom: 2px solid #E5261E;
+  line-height: 33px;
+}
+
+.tv {
+  display: none;
 }
 
 .new {
   height: 478px;
-  margin: 32px auto;
+  margin-bottom: 32px;
 }
 
 .header {
@@ -223,7 +240,6 @@ header, main, .footer-content {
 
 .genres {
   height: 252px;
-  margin: 0 auto 72px;
 }
 
 .genres-cards {
@@ -327,7 +343,8 @@ footer {
   font-size: 16px;
 }
 
-.address, .number {
+.address,
+.number {
   font-weight: 400;
 }
 

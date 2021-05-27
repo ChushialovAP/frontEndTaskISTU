@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="media.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -35,15 +37,15 @@
         </div>
     </header>
     <main>
-        <div class="tabs">
-            <div class="tab" id="films">
-                <p>Фильмы</p>
-            </div>
-            <div class="tab" id="tv">
-                <p>Телеканалы</p>
-            </div>
+        <div class="tabs" id="tabs">
+            <button type="button" class="tab" id="films">
+                Фильмы
+            </button>
+            <button type="button" class="tab" id="tv">
+                Телеканалы
+            </button>
         </div>
-        <article class="films">
+        <article class="films" id="films-content">
             <article class="new">
                 <div class="new-header header">
                     🔥 Новинки
@@ -53,25 +55,25 @@
                         <div class="card-image">
                             <img src="/img/picture.png" alt="">
                             <div class="card-image-text">
-                                
+
                             </div>
                         </div>
                         <div class="card-name">
                             <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
                         </div>
-                        
+
                     </div>
                     <div class="card" id="card2">
                         <div class="card-image">
                             <img src="/img/batman-picture.png" alt="">
                             <div class="card-image-text">
-                                
+
                             </div>
                         </div>
                         <div class="card-name">
                             <p>Новый Бэтмен</p>
                         </div>
-                        
+
                     </div>
                     <div class="card" id="card3">
                         <div class="card-image">
@@ -88,13 +90,13 @@
                         <div class="card-image">
                             <img src="/img/girl-picture.png" alt="">
                             <div class="card-image-text">
-                                
+
                             </div>
                         </div>
                         <div class="card-name">
                             <p>Стриптизёрши</p>
                         </div>
-                        
+
                     </div>
                 </div>
             </article>
@@ -108,31 +110,34 @@
                             <div class="g-card-center">😁</div>
                             <div class="g-title">Комедии</div>
                         </div>
-                        
+
                     </div>
                     <div class="g-card" id="g-card2">
                         <div class="g-card-overlay">
                             <div class="g-card-center">😭</div>
                             <div class="g-title">Драмы</div>
                         </div>
-                        
+
                     </div>
                     <div class="g-card" id="g-card3">
                         <div class="g-card-overlay">
                             <div class="g-card-center">👽</div>
                             <div class="g-title">Фантастика</div>
                         </div>
-                        
+
                     </div>
                     <div class="g-card" id="g-card4">
                         <div class="g-card-overlay">
                             <div class="g-card-center">👻</div>
                             <div class="g-title">Ужасы</div>
                         </div>
-                        
+
                     </div>
                 </div>
             </article>
+        </article>
+        <article class="tv" id="tv-content">
+
         </article>
     </main>
     <footer>
@@ -141,11 +146,17 @@
                 <img src="/img/htc-cs-logo.png" alt="">
             </div>
             <div class="info">
-                <div class="address"><p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p></div>
-                <div class="number"><p>+7 (3412) 93-88-61, 43-29-29</p></div>
+                <div class="address">
+                    <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+                </div>
+                <div class="number">
+                    <p>+7 (3412) 93-88-61, 43-29-29</p>
+                </div>
                 <div class="htc-url"><a href="htc-cs.ru">htc-cs.ru</a></div>
             </div>
         </div>
     </footer>
+    <script src="/src/script.js"></script>
 </body>
+
 </html>
