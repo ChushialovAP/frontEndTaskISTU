@@ -15,13 +15,13 @@ body {
     }
 }
 
-.main-content, .footer-content {
+header, main, .footer-content {
     max-width: 1180px;
     margin: 0 auto;
     border: 0;
 }
 
-header {
+.header-content {
     height: 40px;
     width: 100%;
     margin: 32px 0 0;
