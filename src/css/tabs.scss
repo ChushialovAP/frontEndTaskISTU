@@ -1,0 +1,26 @@
+.tabs {
+    max-width: 310px;
+    margin: 44px auto 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.tab {
+    background-color: white;
+    border: none;
+    font-weight: var(--bold-font-weight);
+    font-size: 28px;
+    box-sizing: b;
+    height: 100%;
+    border-bottom: 2px solid;
+    border-color: transparent;
+}
+
+.tab:hover {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+    line-height: 33px;
+}
