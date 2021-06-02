@@ -26,7 +26,8 @@
   border-color: transparent;
 }
 
-.tabs > button.active {
+.tabs > button.active,
+.tab:active {
   color: var(--red);
   border-bottom: 2px solid var(--red);
   line-height: 33px;
