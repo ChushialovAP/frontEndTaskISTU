@@ -26,7 +26,7 @@
   border-color: transparent;
 }
 
-.tab:hover {
+.tabs > button.active {
   color: var(--red);
   border-bottom: 2px solid var(--red);
   line-height: 33px;

@@ -1,17 +1,18 @@
-window.onload = myMain;
+let tabs = document.querySelectorAll('.tab')
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        let activeTab = document.querySelector('.active');
+        if (activeTab) activeTab.classList.remove('active');
 
-function myMain() {
-    document.getElementById('tabs').onclick = changeContent;
-}
+        tab.classList.add('active')
+    });
+});
 
-function changeContent(e) {
-    if (e.target.tagName = 'BUTTON') {
-        if (e.target.id == 'tv') {
-            document.getElementById('films-content').style.display = 'none';
-            document.getElementById('tv-content').style.display = 'block';
-        } else if (e.target.id == 'films') {
-            document.getElementById('films-content').style.display = 'block';
-            document.getElementById('tv-content').style.display = 'none';
-        }
-    }
+function changeContent(e, content) {
+    var tabContent = document.querySelectorAll('.tab-content');
+    tabContent.forEach(content => {
+        content.style.display = "none";
+    });
+
+    document.getElementById(content).style.display = "block";
 }
