@@ -24,18 +24,37 @@
             </div>
             <div class="search">
                 <div class="div-search-input">
-                    <input type="search" name="q" id="" class="search-input" placeholder="Поиск...">
+                    <input type="text" name="q" id="" class="search-input" placeholder="Поиск...">
                 </div>
                 <div class="div-search-button">
-                    <button type="submit" id="" class="search-button">Найти</button>
+                    <button type="submit" id="" class="header-button">Найти</button>
                 </div>
             </div>
-            <div class="div-login-button">
-                <button type="submit" id="" class="login-button">Войти</button>
+            <div class="name-login-button">
+                <div class="div-name" id="div-name-content"></div>
+                <button type="submit" id="log-btn" class="header-button-back" onclick="showPopup()">Войти</button>
             </div>
         </div>
     </header>
     <main>
+        <div class="popup">
+            <div class="blocker" onclick="hidePopup()"></div>
+            <div class="popup-content">
+                <div class="popup-content-inner">
+                    <p>Вход</p>
+                    <div class="login-input">
+                        <input type="text" name="uname" id="nm" placeholder="Логин">
+                        <input type="text" name="psw" id="pw" placeholder="Пароль">
+                        <label for="remember">
+                            <input type="checkbox" name="remember" id=""> Запомнить
+                        </label>
+                    </div>
+                    <div class="div-login-button">
+                        <button type="submit" class="header-button-back" id="check-login-button" onclick="login()">Войти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="tabs" id="tabs">
             <button type="button" class="tab active" onclick="changeContent(event, 'films-content')">
                 Фильмы

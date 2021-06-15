@@ -65,11 +65,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 60px;
 }
 
 .search-input {
   width: 320px;
+  height: 25px;
   border-left: none;
   border-top: none;
   border-right: none;
@@ -86,14 +86,36 @@
   margin-left: 32px;
 }
 
-.search-button {
+.header-button {
   border: none;
   background-color: white;
   color: var(--red);
   font-size: var(--normal-text-size);
+  font-weight: var(--bold-font-weight);
+  cursor: pointer;
 }
 
-.login-button {
+.name-login-button {
+  width: 182px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.div-name {
+  width: 114px;
+  font-size: 16px;
+  font-weight: var(--bold-font-weight);
+  text-align: right;
+}
+
+.header-button-back {
   border: none;
   width: 113px;
   height: 38px;
@@ -101,10 +123,11 @@
   color: white;
   border-radius: 4px;
   font-size: var(--normal-text-size);
+  font-weight: var(--bold-font-weight);
   cursor: pointer;
 }
 
-.login-button:hover {
+.header-button-2:hover {
   background-color: #CC221B;
 }
 /*# sourceMappingURL=header.css.map */

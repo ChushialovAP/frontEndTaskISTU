@@ -1,18 +1,8 @@
-let tabs = document.querySelectorAll('.tab')
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        let activeTab = document.querySelector('.active');
-        if (activeTab) activeTab.classList.remove('active');
-
-        tab.classList.add('active')
-    });
-});
-
-function changeContent(e, content) {
-    var tabContent = document.querySelectorAll('.tab-content');
-    tabContent.forEach(content => {
-        content.style.display = "none";
-    });
-
-    document.getElementById(content).style.display = "block";
+function callAll(jsfiles) {
+    var src = document.createElement("script");
+    src.setAttribute("type", "text/javascript");
+    src.setAttribute("src", jsfiles);
+    document.getElementsByTagName("head")[0].appendChild(src);
 }
+callAll("/src/js/popup-script.js");
+callAll("/src/js/tabs-script.js");
