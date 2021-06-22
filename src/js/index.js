@@ -1,8 +1,2 @@
-function callAll(jsfiles) {
-    var src = document.createElement("script");
-    src.setAttribute("type", "text/javascript");
-    src.setAttribute("src", jsfiles);
-    document.getElementsByTagName("head")[0].appendChild(src);
-}
-callAll("/src/js/popup-script.js");
-callAll("/src/js/tabs-script.js");
+import '/src/js/popup-script.js'
+import '/src/js/tabs-script.js'

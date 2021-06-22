@@ -8,11 +8,11 @@ onload = () => {
 
 const popup = document.querySelector('.popup');
 
-function showPopup() {
+window.showPopup = function() {
     popup.style.display = 'block';
 }
 
-function hidePopup() {
+window.hidePopup = function() {
     popup.style.display = 'none';
 }
 
@@ -25,7 +25,7 @@ function clearLoginInput() {
     document.getElementById('pw').value = '';
 }
 
-function login() {
+window.login = function() {
     var a = new Array();
 
     var username = document.getElementById('nm').value;

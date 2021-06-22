@@ -1,0 +1,25 @@
+{
+  "name": "frontEndISTU",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChushialovAP/frontEndTaskISTU.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChushialovAP/frontEndTaskISTU/issues"
+  },
+  "homepage": "https://github.com/ChushialovAP/frontEndTaskISTU#readme",
+  "devDependencies": {
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  }
+}

@@ -8,7 +8,7 @@ tabs.forEach(tab => {
     });
 });
 
-function changeContent(e, content) {
+window.changeContent = function(e, content) {
     var tabContent = document.querySelectorAll('.tab-content');
     tabContent.forEach(content => {
         content.style.display = "none";
