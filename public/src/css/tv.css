@@ -1,0 +1,67 @@
+#tv-content {
+    display: none;
+}
+
+.channels {
+    width: 100%;
+    height: 696px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.channel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 162px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+}
+
+.channel:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.channel-logo {
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.channel-name {
+    font-weight: var(--bold-font-weight);
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+
+.channel-schedule ul {
+    list-style: none;
+    font-weight: var(--normal-font-weight);
+    font-style: normal;
+    font-size: 16px;
+}
+
+.channel-schedule ul li:first-child {
+    color: var(--red);
+}
+
+.channel-schedule ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.channel-schedule ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.channel-schedule ul li p:not(:last-child) {
+    margin-right: 16px;
+}

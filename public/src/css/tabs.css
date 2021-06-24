@@ -1,0 +1,34 @@
+.tabs {
+    max-width: 310px;
+    margin: 44px auto 0;
+    height: 42px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.tab {
+    background-color: white;
+    border: none;
+    font-weight: var(--bold-font-weight);
+    font-size: 28px;
+    -webkit-box-sizing: b;
+    box-sizing: b;
+    height: 100%;
+    border-bottom: 2px solid;
+    border-color: transparent;
+}
+
+.tabs>button.active,
+.tab:active {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+    line-height: 33px;
+}
