@@ -1,2 +1,2 @@
-import '/src/js/popup-script.js'
-import '/src/js/tabs-script.js'
+import './popup-script.js'
+import './tabs-script.js'
