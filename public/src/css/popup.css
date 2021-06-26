@@ -101,4 +101,5 @@
 .div-login-button {
     position: absolute;
     bottom: 36px;
+    transform: translate(50%);
 }
