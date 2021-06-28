@@ -16,10 +16,10 @@ const User = require("../model/User");
 
 router.post(
     "/signup", [
-        check("uname", "Please Enter a Valid Username")
+        check("username", "Please Enter a Valid Username")
         .not()
         .isEmpty(),
-        check("psw", "Please enter a valid password").isLength({
+        check("password", "Please enter a valid password").isLength({
             min: 6
         })
     ],
@@ -27,13 +27,12 @@ router.post(
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({
-                b: req.body,
                 errors: errors.array()
             });
         }
 
-        const username = req.body.uname;
-        const password = req.body.psw;
+        const username = req.body.username;
+        const password = req.body.password;
         try {
             let user = await User.findOne({
                 username

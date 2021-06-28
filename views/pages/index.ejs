@@ -42,16 +42,16 @@
             <div class="popup-content">
                 <div class="popup-content-inner">
                     <p>Вход</p>
-                    <form action="/signup" method="POST">
+                    <form action="/signup" method="POST" id="login-form">
                         <div class="login-input">
-                            <input type="text" name="uname" id="nm" placeholder="Логин">
-                            <input type="text" name="psw" id="pw" placeholder="Пароль">
+                            <input type="text" name="username" id="nm" placeholder="Логин">
+                            <input type="text" name="password" id="pw" placeholder="Пароль">
                             <label for="remember">
                             <input type="checkbox" name="remember" id="checkbox-remember"> Запомнить
                         </label>
                         </div>
                         <div class="div-login-button">
-                            <button type="submit" class="header-button-back" id="check-login-button" onclick="login()">Войти</button>
+                            <button type="submit" class="header-button-back" id="check-login-button">Войти</button>
                         </div>
                     </form>
                 </div>
@@ -298,6 +298,7 @@
         </div>
     </footer>
     <script src="dist/index_bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
