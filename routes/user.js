@@ -38,26 +38,32 @@ router.post(
                 username
             });
             if (user) {
-                return res.status(400).json({
-                    msg: "User Already Exists"
-                });
+                const isMatch = await bcrypt.compare(password, user.password);
+                if (!isMatch)
+                    return res.status(400).json({
+                        message: "Incorrect Password !"
+                    });
                 //res.writeHead(302, { 'Location': '/login' });
                 //res.end();
             }
 
-            user = new User({
-                username,
-                password
-            });
+            if (!user) {
 
-            const salt = await bcrypt.genSalt(10);
-            user.password = await bcrypt.hash(password, salt);
+                user = new User({
+                    username,
+                    password
+                });
 
-            await user.save();
+                const salt = await bcrypt.genSalt(10);
+                user.password = await bcrypt.hash(password, salt);
+
+                await user.save();
+            }
 
             const payload = {
                 user: {
-                    id: user.id
+                    id: user.id,
+                    username: username
                 }
             };
 
@@ -69,7 +75,8 @@ router.post(
                 (err, token) => {
                     if (err) throw err;
                     res.status(200).json({
-                        token
+                        token,
+                        username
                     });
                 }
             );
@@ -80,5 +87,11 @@ router.post(
         }
     }
 );
+
+router.get('/api/profile', function(req, res) {
+    res.json({
+        name: req.user.username
+    });
+});
 
 module.exports = router;

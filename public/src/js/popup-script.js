@@ -1,11 +1,3 @@
-onload = () => {
-    var cookieUsername = getCookie('username');
-
-    if (cookieUsername) {
-        successLogin(cookieUsername);
-    }
-}
-
 const popup = document.querySelector('.popup');
 
 window.showPopup = function() {
@@ -17,44 +9,11 @@ window.hidePopup = function() {
 }
 
 var btn = document.getElementById('log-btn');
-var checkbox = document.getElementById('checkbox-remember');
 var divName = document.getElementById('div-name-content');
 
 function clearLoginInput() {
     document.getElementById('nm').value = '';
     document.getElementById('pw').value = '';
-}
-
-window.login = function() {
-    var a = new Array();
-
-    var username = document.getElementById('nm').value;
-    var password = document.getElementById('pw').value;
-
-    a = JSON.parse((localStorage.getItem('all_users'))) || [];
-
-    const hash = Object.fromEntries(
-        a.map(e => [e.name, e.password])
-    );
-
-    for (let key in hash) {
-        if (key === username) {
-            if (atob(hash[key]) === password) {
-                successLogin(username);
-            } else {
-                alert('пароль неверен');
-            }
-
-            clearLoginInput();
-            return;
-        }
-    }
-
-    a.push({ name: username, password: btoa(password) });
-
-    localStorage.setItem('all_users', JSON.stringify(a));
-    successLogin(username);
-    clearLoginInput();
 }
 
 function logout() {
@@ -63,14 +22,10 @@ function logout() {
     btn.innerHTML = "Войти";
     btn.onclick = showPopup;
     divName.innerHTML = '';
-    eraseCookie('username');
+    localStorage.removeItem('token');
 }
 
 function successLogin(username) {
-    if (checkbox.checked) {
-        setCookie('username', username, 1);
-        console.log('saved');
-    }
     btn.classList.remove('header-button-back');
     btn.classList.add('header-button');
     btn.onclick = logout;
@@ -104,3 +59,68 @@ function getCookie(name) {
 function eraseCookie(name) {
     document.cookie = name + '=; Max-Age=-99999999;';
 }
+
+
+/**
+ * Helper function for POSTing data as JSON with fetch.
+ *
+ * @param {Object} options
+ * @param {string} options.url - URL to POST data to
+ * @param {FormData} options.formData - `FormData` instance
+ * @return {Object} - Response body from URL that was POSTed to
+ */
+async function postFormDataAsJson({
+    url,
+    formData
+}) {
+    const plainFormData = Object.fromEntries(formData.entries());
+    const formDataJsonString = JSON.stringify(plainFormData);
+
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: formDataJsonString,
+    };
+
+    const response = await fetch(url, fetchOptions);
+
+    if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(errorMessage);
+    }
+
+    return response.json();
+}
+
+/**
+ * Event handler for a form submit event.
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+ *
+ * @param {SubmitEvent} event
+ */
+async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const url = form.action;
+
+    try {
+        const formData = new FormData(form);
+        const responseData = await postFormDataAsJson({
+            url,
+            formData
+        });
+
+        localStorage.token = responseData.token;
+        successLogin(responseData.username);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const exampleForm = document.getElementById("login-form");
+exampleForm.addEventListener("submit", handleFormSubmit);

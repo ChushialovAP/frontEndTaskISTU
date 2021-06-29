@@ -42,13 +42,11 @@
             <div class="popup-content">
                 <div class="popup-content-inner">
                     <p>Вход</p>
-                    <form action="/signup" method="POST" id="login-form">
+                    <form id="login-form" action="/signup">
                         <div class="login-input">
                             <input type="text" name="username" id="nm" placeholder="Логин">
                             <input type="text" name="password" id="pw" placeholder="Пароль">
-                            <label for="remember">
-                            <input type="checkbox" name="remember" id="checkbox-remember"> Запомнить
-                        </label>
+
                         </div>
                         <div class="div-login-button">
                             <button type="submit" class="header-button-back" id="check-login-button">Войти</button>
