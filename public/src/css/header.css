@@ -13,6 +13,16 @@
     justify-content: space-between;
 }
 
+.header-content a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-content a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 .logo {
     left: 0;
     display: -webkit-box;

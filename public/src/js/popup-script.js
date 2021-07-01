@@ -69,9 +69,9 @@ function eraseCookie(name) {
  * @param {FormData} options.formData - `FormData` instance
  * @return {Object} - Response body from URL that was POSTed to
  */
-async function postFormDataAsJson({
+export default async function postFormDataAsJson({
     url,
-    formData
+    formData = null
 }) {
     const plainFormData = Object.fromEntries(formData.entries());
     const formDataJsonString = JSON.stringify(plainFormData);
@@ -114,7 +114,7 @@ async function handleFormSubmit(event) {
             url,
             formData
         });
-
+        alert(responseData.token);
         localStorage.token = responseData.token;
         successLogin(responseData.username);
     } catch (error) {

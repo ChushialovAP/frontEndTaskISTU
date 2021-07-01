@@ -1,0 +1,41 @@
+.movie-info {
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-text-info {
+    width: 580px;
+}
+
+.main-text-info ul {
+    list-style: none;
+}
+
+.main-img img {
+    border-radius: 8px;
+}
+
+.list-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.list-info p {
+    font-size: var(--normal-text-size);
+    font-weight: var(--normal-font-weight);
+    min-width: 180px;
+}
+
+.list-info li:first-child p:last-child {
+    font-weight: var(--bold-font-weight);
+    font-size: 20px;
+}
+
+.list-info ul li:not(:last-child) {
+    margin-bottom: 21px;
+}
+
+.movie-description {
+    margin-top: 24px;
+}

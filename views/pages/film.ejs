@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/">
+                <div class="logo">
+                    <div class="logo-sign-layer">
+                        <div id="ellipse"></div>
+                        <div id="vector"></div>
+                    </div>
+                    <div class="logo-text">
+                        Видеосервис
+                    </div>
+                </div>
+            </a>
+            <div class="search">
+                <div class="div-search-input">
+                    <input type="text" name="q" id="" class="search-input" placeholder="Поиск...">
+                </div>
+                <div class="div-search-button">
+                    <button type="submit" id="" class="header-button">Найти</button>
+                </div>
+            </div>
+            <div class="name-login-button">
+                <div class="div-name" id="div-name-content"></div>
+                <button type="submit" id="log-btn" class="header-button-back" onclick="showPopup()">Войти</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="movie-info">
+            <div class="main-img">
+                <img src=<%=img_link%> alt="" width="280px" height="370px">
+            </div>
+            <div class="main-text-info">
+                <div class="list-info">
+                    <ul>
+                        <li>
+                            <p>Название:</p>
+                            <p>
+                                <%=title%>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Продолжительность:</p>
+                            <p>
+                                <%=time%>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Год:</p>
+                            <p>
+                                <%=year%>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="movie-description">
+                    <p>
+                        <%=description%>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="htc-logo">
+                <img src="../../src/img/icons/htc-cs-logo.png" alt="">
+            </div>
+            <div class="info">
+                <div class="address">
+                    <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+                </div>
+                <div class="number">
+                    <p>+7 (3412) 93-88-61, 43-29-29</p>
+                </div>
+                <div class="htc-url"><a href="htc-cs.ru">htc-cs.ru</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
