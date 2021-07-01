@@ -5,6 +5,7 @@
 @import url("/src/css/tv.css");
 @import url("/src/css/footer.css");
 @import url("/src/css/film-description.css");
+@import url("/src/css/comments.css");
 * {
     margin: 0;
     padding: 0;

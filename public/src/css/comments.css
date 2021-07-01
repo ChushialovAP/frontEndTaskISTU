@@ -1,0 +1,58 @@
+.div-comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.div-comments p {
+    font-size: 20px;
+    font-weight: var(--bold-font-weight);
+}
+
+.add-comment {
+    margin-top: 24px;
+}
+
+.add-comment textarea {
+    width: 760px;
+    height: 110px;
+    border-radius: 8px;
+    background-color: rgba(229, 38, 30, 0.15);
+    color: rgba(229, 38, 30, 1);
+    font-size: 16px;
+    border: none;
+    padding: 16px;
+    resize: none;
+    margin: 0 auto;
+}
+
+.add-comment textarea:focus {
+    outline: none;
+}
+
+.add-comment textarea::placeholder {
+    color: rgba(229, 38, 30, 1);
+}
+
+.add-comment {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.add-comment input[type="submit"] {
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 174px;
+    height: 38px;
+    color: white;
+    background-color: rgba(229, 38, 30, 1);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--normal-font-size);
+    font-weight: var(--bold-font-weight);
+}

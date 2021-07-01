@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const user = require("./routes/user");
 const film = require("./routes/film");
+const comment = require("./routes/comment");
 const InitiateMongoServer = require("./config/db");
 
 const ejs = require('ejs');
@@ -31,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/", user);
 
 app.use("/film", film);
+
+app.use("/comment", comment)
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');

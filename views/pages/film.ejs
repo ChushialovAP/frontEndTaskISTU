@@ -39,6 +39,24 @@
         </div>
     </header>
     <main>
+        <div class="popup">
+            <div class="blocker" id="blocker" onclick="hidePopup()"></div>
+            <div class="popup-content">
+                <div class="popup-content-inner">
+                    <p>Вход</p>
+                    <form id="login-form" action="/signup">
+                        <div class="login-input">
+                            <input type="text" name="username" id="nm" placeholder="Логин">
+                            <input type="text" name="password" id="pw" placeholder="Пароль">
+
+                        </div>
+                        <div class="div-login-button">
+                            <button type="submit" class="header-button-back" id="check-login-button">Войти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="movie-info">
             <div class="main-img">
                 <img src=<%=img_link%> alt="" width="280px" height="370px">
@@ -73,6 +91,19 @@
                 </div>
             </div>
         </div>
+        <div class="div-comments">
+            <p>Комментарии</p>
+            <div class="add-comment">
+                <form action="/comment/add" id="comment-form">
+                    <div class="div-add-comment-text">
+                        <textarea name="bodyText" id="" placeholder="Введите комментарий..."></textarea>
+                    </div>
+
+                    <input type="submit" value="Опубликовать">
+                </form>
+            </div>
+            <div class="comments"></div>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -90,6 +121,8 @@
             </div>
         </div>
     </footer>
+    <script src="../../src/js/popup-script.js"></script>
+    <script src="../../src/js/comments.js"></script>
 </body>
 
 </html>
