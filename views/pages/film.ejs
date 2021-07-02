@@ -96,13 +96,16 @@
             <div class="add-comment">
                 <form action="/comment/add" id="comment-form">
                     <div class="div-add-comment-text">
-                        <textarea name="bodyText" id="" placeholder="Введите комментарий..."></textarea>
+                        <textarea name="bodyText" id="comment-inp" placeholder="Введите комментарий..."></textarea>
                     </div>
 
                     <input type="submit" value="Опубликовать">
                 </form>
             </div>
-            <div class="comments"></div>
+            <div class="comments">
+                <ul class="" id="ul-comments">
+                </ul>
+            </div>
         </div>
     </main>
     <footer>
@@ -121,6 +124,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../src/js/popup-script.js"></script>
     <script src="../../src/js/comments.js"></script>
 </body>

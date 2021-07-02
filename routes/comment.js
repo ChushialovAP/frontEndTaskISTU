@@ -26,4 +26,12 @@ router.post('/add', async(req, res) => {
     }
 });
 
+router.get('/get', async(req, res) => {
+    const title = req.header('title');
+
+    const comments = await Comment.find({ 'title': title });
+    res.status(200).json({ comments });
+
+});
+
 module.exports = router;

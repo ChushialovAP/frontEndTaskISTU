@@ -1,3 +1,6 @@
+window.addEventListener("load", async function(event) {
+    await addAllComments();
+}, false);
 /**
  * Helper function for POSTing data as JSON with fetch.
  *
@@ -6,7 +9,7 @@
  * @param {FormData} options.formData - `FormData` instance
  * @return {Object} - Response body from URL that was POSTed to
  */
-async function postFormDataAsJson({
+async function addCommentToDB({
     url,
     formData = null
 }) {
@@ -60,13 +63,47 @@ async function handleFormSubmit(event) {
         const formData = new FormData(form);
         formData.append('title', lastSegment);
         formData.append('username', un);
-        const responseData = await postFormDataAsJson({
+        const _ = await addCommentToDB({
             url,
             formData
         });
-        console.log(responseData);
+        addCommentToPage(formData);
     } catch (error) {
         console.error(error);
+    }
+}
+
+function addCommentToPage(data) {
+    $("#ul-comments").append('<li><p>' + data.get('username') + '</p><p>' + data.get('bodyText') + '</p></li>');
+    $("#comment-inp").val('');
+}
+
+async function addAllComments() {
+    var parts = window.location.href.split('/');
+    var lastSegment = parts.pop() || parts.pop();
+
+    const fetchOptions = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            title: lastSegment,
+        },
+    };
+
+    try {
+        const res = await fetch('/comment/get', fetchOptions);
+        const resData = await res.json();
+        if (!res.ok) {
+            const errorMessage = await res.text();
+            throw new Error(errorMessage);
+        } else {
+            resData.comments.forEach(comment => {
+                $("#ul-comments").append('<li><p>' + comment.username + '</p><p>' + comment.bodyText + '</p></li>');
+            });
+        }
+    } catch (error) {
+        console.log(error);
     }
 }
 

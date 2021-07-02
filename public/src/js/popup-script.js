@@ -120,7 +120,7 @@ async function handleFormSubmit(event) {
             url,
             formData
         });
-        alert(responseData.token);
+
         localStorage.token = responseData.token;
         successLogin(responseData.username);
     } catch (error) {

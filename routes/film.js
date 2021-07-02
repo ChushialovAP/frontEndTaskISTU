@@ -4,7 +4,6 @@ const fetch = require('node-fetch');
 const request = require('request');
 const filmData = require("../middleware/film-data");
 
-
 router.get('/:title', filmData,
     async(req, res) => {
         var link = '';
@@ -20,6 +19,7 @@ router.get('/:title', filmData,
         } catch (error) {
             console.log('error to get data');
         }
+
 
         res.status(200).render('pages/film', {
             img_link: link,

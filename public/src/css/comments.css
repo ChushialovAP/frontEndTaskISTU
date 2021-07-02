@@ -56,3 +56,38 @@
     font-size: var(--normal-font-size);
     font-weight: var(--bold-font-weight);
 }
+
+.comments ul {
+    list-style: none;
+}
+
+.comments ul li {
+    margin-top: 16px;
+    width: 760px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    color: rgba(51, 51, 51, 1);
+    border: none;
+    padding: 16px;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.comments ul li p {
+    font-size: 16px;
+}
+
+.comments ul li p:last-child {
+    font-weight: var(--normal-font-weight);
+}
+
+.comments ul li p:first-child {
+    font-weight: var(--bold-font-weight);
+    margin-bottom: 8px;
+}
