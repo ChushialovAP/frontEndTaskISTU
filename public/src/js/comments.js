@@ -76,6 +76,7 @@ async function handleFormSubmit(event) {
 function addCommentToPage(data) {
     $("#ul-comments").append('<li><p>' + data.get('username') + '</p><p>' + data.get('bodyText') + '</p></li>');
     $("#comment-inp").val('');
+    window.location.href = window.location.href.split("?")[0]; //"http://www.newurl.com";
 }
 
 async function addAllComments() {
