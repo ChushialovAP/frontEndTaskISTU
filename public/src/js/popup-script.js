@@ -156,5 +156,10 @@ async function getName() {
     }
 }
 
+function addAction() {
+    document.getElementById("search-film-form").action = "/";
+    return true;
+}
+
 const exampleForm = document.getElementById("login-form");
 exampleForm.addEventListener("submit", handleFormSubmit);
